@@ -9,7 +9,7 @@
 			"email": "tangoman@free.fr"
 		}
 	],
-	"type": "library",
+	"type": "symfony-bundle",
 	"keywords": [
 		"TangoMan",
 		"Symfony",

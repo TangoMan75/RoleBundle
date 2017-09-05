@@ -4,38 +4,51 @@ TangoMan Role Bundle
 **TangoMan Role Bundle** provides basis for user roles / privileges management.
 
 
-How to install
---------------
+Step 1: Download the Bundle
+---------------------------
 
-With composer
+Open a command console, enter your project directory and execute the
+following command to download the latest stable version of this bundle:
 
-```console
+```bash
 $ composer require tangoman/role-bundle
 ```
 
+This command requires you to have Composer installed globally, as explained
+in the [installation chapter](https://getcomposer.org/doc/00-intro.md)
+of the Composer documentation.
 
-Enable the bundle
------------------
+Step 2: Enable the Bundle
+-------------------------
 
-Don't forget to enable the bundle in the kernel:
+Then, enable the bundle by adding it to the list of registered bundles
+in the `app/AppKernel.php` file of your project:
 
 ```php
 <?php
 // app/AppKernel.php
 
-public function registerBundles()
+// ...
+class AppKernel extends Kernel
 {
-    $bundles = array(
+    // ...
+
+    public function registerBundles()
+    {
+        $bundles = array(
+            // ...
+            new TangoMan\RoleBundle\TangoManRoleBundle(),
+        );
+
         // ...
-        new TangoMan\RoleBundle\TangoManRoleBundle(),
-    );
+    }
 }
 ```
 
+Step 3: Create Role entity
+--------------------------
 
-Create your Role entity
------------------------
-
+Your Role entity must extends TangoMan\RoleBundle\Model\Role.
 
 ```php
 <?php
@@ -55,9 +68,10 @@ class Role extends TangoManRole
 }
 ```
 
+Step 4: Create Privilege entity
+-------------------------------
 
-Create your Privilege entity
-----------------------------
+Your Privilege entity must extends TangoMan\RoleBundle\Model\Privilege.
 
 ```php
 <?php
@@ -77,9 +91,8 @@ class Privilege extends TangoManPrivilege
 }
 ```
 
-
-Create Role and Privilege repository
-------------------------------------
+Step 5: Create Role and Privilege repository
+--------------------------------------------
 
 ```php
 <?php
@@ -117,9 +130,10 @@ class PrivilegeRepository extends EntityRepository
 }
 ```
 
+Step 6: Inside User entity
+--------------------------
 
-Inside your User entity
------------------------
+Your User entity must extends TangoMan\RoleBundle\Model\User.
 
 ```php
 <?php
@@ -153,15 +167,22 @@ class User extends TangoManUser
 }
 ```
 
+Step 7: Update database schema
+------------------------------
 
-Load Default Roles And Privileges
----------------------------------
+From your project folder :
+
+```console
+$ php bin/console doctrine:schema:update --force
+```
+
+Step 8: Load default roles and privileges
+-----------------------------------------
 
 ```console
 $ php bin/console tangoman:roles
 $ php bin/console tangoman:privileges
 ```
-
 
 Note
 ====

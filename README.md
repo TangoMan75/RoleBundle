@@ -3,6 +3,8 @@ TangoMan Role Bundle
 
 **TangoMan Role Bundle** provides basis for user roles / privileges management.
 
+Installation
+============
 
 Step 1: Download the Bundle
 ---------------------------
@@ -45,7 +47,10 @@ class AppKernel extends Kernel
 }
 ```
 
-Step 3: Create Role entity
+Usage
+=====
+
+Step 1: Create Role entity
 --------------------------
 
 Your Role entity must extends TangoMan\RoleBundle\Model\Role.
@@ -68,7 +73,7 @@ class Role extends TangoManRole
 }
 ```
 
-Step 4: Create Privilege entity
+Step 2: Create Privilege entity
 -------------------------------
 
 Your Privilege entity must extends TangoMan\RoleBundle\Model\Privilege.
@@ -91,7 +96,7 @@ class Privilege extends TangoManPrivilege
 }
 ```
 
-Step 5: Create Role and Privilege repository
+Step 3: Create Role and Privilege repository
 --------------------------------------------
 
 ```php
@@ -130,7 +135,7 @@ class PrivilegeRepository extends EntityRepository
 }
 ```
 
-Step 6: Inside User entity
+Step 4: Inside User entity
 --------------------------
 
 Your User entity must extends TangoMan\RoleBundle\Model\User.
@@ -167,7 +172,7 @@ class User extends TangoManUser
 }
 ```
 
-Step 7: Update database schema
+Step 5: Update database schema
 ------------------------------
 
 From your project folder :
@@ -176,7 +181,7 @@ From your project folder :
 $ php bin/console doctrine:schema:update --force
 ```
 
-Step 8: Load default roles and privileges
+Step 6: Load default roles and privileges
 -----------------------------------------
 
 ```console
@@ -194,14 +199,14 @@ License
 
 Copyrights (c) 2017 Matthias Morin
 
-[![License][license-GPL]][license-url]
-Distributed under the GPLv3.0 license.
+[![License][MIT]][license-url]
+Distributed under the MIT license.
 
 If you like **TangoMan Role Bundle** please star!
 And follow me on GitHub: [TangoMan75](https://github.com/TangoMan75)
 ... And check my other cool projects.
 
-[tangoman.free.fr](http://tangoman.free.fr)
+[Matthias Morin | LinkedIn](https://www.linkedin.com/in/morinmatthias)
 
 [license-GPL]: https://img.shields.io/badge/Licence-GPLv3.0-green.svg
 [license-MIT]: https://img.shields.io/badge/Licence-MIT-green.svg

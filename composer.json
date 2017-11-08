@@ -1,12 +1,12 @@
 {
 	"name": "tangoman/role-bundle",
 	"description": "Symfony Role Bundle",
-	"version": "1.0.1",
-	"license": "GPL-3.0",
+	"version": "1.0.2",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Matthias Morin",
-			"email": "tangoman@free.fr"
+			"email": "matthias.morin@gmail.com"
 		}
 	],
 	"type": "library",
@@ -19,7 +19,7 @@
 	],
 	"require": {
 		"php": ">=5.3.0",
-		"tangoman/entity-helper": "^1.0"
+		"tangoman/entity-helper": "^2.0"
 	},
 	"autoload": {
 		"psr-4": {

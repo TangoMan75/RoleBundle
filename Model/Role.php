@@ -8,8 +8,8 @@ use Symfony\Component\Security\Core\Authorization\Voter\RoleHierarchyVoter;
 use Symfony\Component\Security\Core\Role\RoleInterface;
 use TangoMan\RoleBundle\Relationships\RolesHavePrivileges;
 use TangoMan\RoleBundle\Relationships\RolesHaveUsers;
-use TangoMan\EntityHelper\HasLabel;
-use TangoMan\EntityHelper\HasName;
+use TangoMan\EntityHelper\Traits\HasLabel;
+use TangoMan\EntityHelper\Traits\HasName;
 
 /**
  * Class Role

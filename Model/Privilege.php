@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use TangoMan\RoleBundle\Relationships\PrivilegesHaveRoles;
 use TangoMan\RoleBundle\Relationships\PrivilegesHaveUsers;
-use TangoMan\EntityHelper\HasLabel;
-use TangoMan\EntityHelper\HasName;
+use TangoMan\EntityHelper\Traits\HasLabel;
+use TangoMan\EntityHelper\Traits\HasName;
 
 /**
  * Class Privilege

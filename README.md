@@ -199,7 +199,7 @@ License
 
 Copyrights (c) 2017 Matthias Morin
 
-[![License][MIT]][license-url]
+[![License-MIT]][license-url]
 Distributed under the MIT license.
 
 If you like **TangoMan Role Bundle** please star!

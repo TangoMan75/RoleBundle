@@ -197,7 +197,7 @@ If you find any bug please report here : [Issues](https://github.com/TangoMan75/
 License
 =======
 
-Copyrights (c) 2017 Matthias Morin
+Copyrights (c) 2018 Matthias Morin
 
 [![License-MIT]][license-url]
 Distributed under the MIT license.

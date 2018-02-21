@@ -18,7 +18,7 @@ use TangoMan\EntityHelper\Traits\HasName;
  * @author  Matthias Morin <matthias.morin@gmail.com>
  * @package TangoMan\RoleBundle\Model
  */
-class Role implements RoleInterface
+class Role extends \Symfony\Component\Security\Core\Role\Role
 {
     use HasLabel;
     use HasName;

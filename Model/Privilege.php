@@ -14,7 +14,7 @@ use TangoMan\EntityHelper\Traits\HasName;
  * Class Privilege
  * @ORM\HasLifecycleCallbacks()
  *
- * @author  Matthias Morin <tangoman@free.fr>
+ * @author  Matthias Morin <matthias.morin@gmail.com>
  * @package TangoMan\RoleBundle\Model
  */
 class Privilege

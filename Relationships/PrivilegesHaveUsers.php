@@ -14,7 +14,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * 4. Entity constructor must initialize ArrayCollection object
  *     $this->users = new ArrayCollection();
  *
- * @author  Matthias Morin <tangoman@free.fr>
+ * @author  Matthias Morin <matthias.morin@gmail.com>
  * @package TangoMan\RoleBundle\Relationships
  */
 trait PrivilegesHaveUsers

@@ -15,7 +15,7 @@ use TangoMan\EntityHelper\Traits\HasName;
  * Class Role
  * @ORM\HasLifecycleCallbacks()
  *
- * @author  Matthias Morin <tangoman@free.fr>
+ * @author  Matthias Morin <matthias.morin@gmail.com>
  * @package TangoMan\RoleBundle\Model
  */
 class Role implements RoleInterface

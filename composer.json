@@ -1,7 +1,7 @@
 {
     "name": "tangoman/role-bundle",
     "description": "Symfony Role Bundle",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "license": "MIT",
     "authors": [
         {
@@ -9,7 +9,7 @@
             "email": "matthias.morin@gmail.com"
         }
     ],
-    "type": "library",
+    "type": "symfony-bundle",
     "keywords": [
         "TangoMan",
         "Symfony",

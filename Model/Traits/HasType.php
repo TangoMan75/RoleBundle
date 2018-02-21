@@ -5,7 +5,7 @@ namespace TangoMan\RoleBundle\Model\Traits;
 /**
  * Trait HasType
  *
- * @author  Matthias Morin <tangoman@free.fr>
+ * @author  Matthias Morin <matthias.morin@gmail.com>
  * @package TangoMan\RoleBundle\Model\Traits
  */
 trait HasType

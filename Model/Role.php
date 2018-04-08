@@ -28,7 +28,11 @@ use TangoMan\EntityHelper\Traits\HasName;
  * @ORM\HasLifecycleCallbacks()
  *
  * @author     Matthias Morin <matthias.morin@gmail.com>
- * @deprecated The "TangoMan\RoleBundle\Model\Role" class implements "Symfony\Component\Security\Core\Role\RoleInterface" that is deprecated The RoleInterface is deprecated since version 3.3 and will be removed in 4.0. Extend the Symfony\Component\Security\Core\Role\Role class instead.
+ * @deprecated The "TangoMan\RoleBundle\Model\Role" class implements
+ *             "Symfony\Component\Security\Core\Role\RoleInterface" that is
+ *             deprecated The RoleInterface is deprecated since version 3.3 and
+ *             will be removed in 4.0. Extend the
+ *             Symfony\Component\Security\Core\Role\Role class instead.
  * @package    TangoMan\RoleBundle\Model
  */
 class Role extends \Symfony\Component\Security\Core\Role\Role

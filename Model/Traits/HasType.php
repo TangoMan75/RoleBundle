@@ -17,6 +17,7 @@ namespace TangoMan\RoleBundle\Model\Traits;
  */
 trait HasType
 {
+
     /**
      * @var string
      * @ORM\Column(type="string", length=255, nullable=true)

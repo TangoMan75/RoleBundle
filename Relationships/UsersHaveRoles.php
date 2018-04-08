@@ -13,10 +13,14 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Trait UsersHaveRoles
- * This trait defines the OWNING side of a ManyToMany bidirectional relationship.
- * 1. Requires owned `Role` entity to implement `$users` property with `ManyToMany` and `mappedBy="roles"` annotation.
- * 2. Requires owned `Role` entity to implement `linkUser` and `unlinkUser` methods.
- * 3. Requires formType to own `'by_reference => false,` attribute to force use of `add` and `remove` methods.
+ * This trait defines the OWNING side of a ManyToMany bidirectional
+ * relationship.
+ * 1. Requires owned `Role` entity to implement `$users` property with
+ * `ManyToMany` and `mappedBy="roles"` annotation.
+ * 2. Requires owned `Role` entity to implement `linkUser` and `unlinkUser`
+ * methods.
+ * 3. Requires formType to own `'by_reference => false,` attribute to force use
+ * of `add` and `remove` methods.
  * 4. Entity constructor must initialize ArrayCollection object
  *     $this->roles = new ArrayCollection();
  *
@@ -25,6 +29,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 trait UsersHaveRoles
 {
+
     /**
      * @var array|Role[]|ArrayCollection
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Role", inversedBy="users")
@@ -61,7 +66,7 @@ trait UsersHaveRoles
         }
 
         // Every user has "ROLE_USER"
-        if (!in_array('ROLE_USER', $roles)) {
+        if ( ! in_array('ROLE_USER', $roles)) {
             $roles[] = 'ROLE_USER';
         }
 
@@ -128,7 +133,7 @@ trait UsersHaveRoles
      */
     public function linkRole(Role $role)
     {
-        if (!$this->roles->contains($role)) {
+        if ( ! $this->roles->contains($role)) {
             $this->roles[] = $role;
         }
     }

@@ -14,9 +14,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Trait UsersHavePrivileges
  * This trait defines the OWNING side of a ManyToMany relationship.
- * 1. Requires owned `Privilege` entity to implement `$users` property with `ManyToMany` and `mappedBy="privileges"` annotation.
- * 2. Requires owned `Privilege` entity to implement `linkUser` and `unlinkUser` methods.
- * 3. Requires formType to own `'by_reference => false,` attribute to force use of `add` and `remove` methods.
+ * 1. Requires owned `Privilege` entity to implement `$users` property with
+ * `ManyToMany` and `mappedBy="privileges"` annotation.
+ * 2. Requires owned `Privilege` entity to implement `linkUser` and
+ * `unlinkUser` methods.
+ * 3. Requires formType to own `'by_reference => false,` attribute to force use
+ * of `add` and `remove` methods.
  * 4. Entity constructor must initialize ArrayCollection object
  *     $this->privileges = new ArrayCollection();
  *
@@ -25,9 +28,11 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 trait UsersHavePrivileges
 {
+
     /**
      * @var array|Privilege[]|ArrayCollection
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Privilege", inversedBy="users", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Privilege", inversedBy="users",
+     *                                                            cascade={"persist"})
      */
     protected $privileges = [];
 
@@ -115,7 +120,7 @@ trait UsersHavePrivileges
      */
     public function linkPrivilege(Privilege $privilege)
     {
-        if (!$this->privileges->contains($privilege)) {
+        if ( ! $this->privileges->contains($privilege)) {
             $this->privileges[] = $privilege;
         }
     }

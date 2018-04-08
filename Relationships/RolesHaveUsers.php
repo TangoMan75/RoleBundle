@@ -14,9 +14,11 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Trait RolesHaveUsers
  * This trait defines the INVERSE side of a ManyToMany relationship.
- * 1. Requires `User` entity to implement `$roles` property with `ManyToMany` and `inversedBy="users"` annotation.
+ * 1. Requires `User` entity to implement `$roles` property with `ManyToMany`
+ * and `inversedBy="users"` annotation.
  * 2. Requires `User` entity to implement `linkRole` and `unlinkRole` methods.
- * 3. Requires formType to own `'by_reference => false,` attribute to force use of `add` and `remove` methods.
+ * 3. Requires formType to own `'by_reference => false,` attribute to force use
+ * of `add` and `remove` methods.
  * 4. Entity constructor must initialize ArrayCollection object
  *     $this->users = new ArrayCollection();
  *
@@ -25,9 +27,11 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 trait RolesHaveUsers
 {
+
     /**
      * @var array|User[]|ArrayCollection
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\User", mappedBy="roles", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\User", mappedBy="roles",
+     *                                                       cascade={"persist"})
      * @ORM\OrderBy({"username"="DESC"})
      */
     protected $users = [];
@@ -103,7 +107,7 @@ trait RolesHaveUsers
      */
     public function linkUser(User $user)
     {
-        if (!$this->users->contains($user)) {
+        if ( ! $this->users->contains($user)) {
             $this->users[] = $user;
         }
     }

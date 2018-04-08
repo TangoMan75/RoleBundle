@@ -204,7 +204,7 @@ If you find any bug please report here : [Issues](https://github.com/TangoMan75/
 License
 =======
 
-Copyrights (c) 2018 Matthias Morin
+Copyright (c) 2018 Matthias Morin
 
 [![License-MIT]][license-url]
 Distributed under the MIT license.
@@ -215,6 +215,5 @@ And follow me on GitHub: [TangoMan75](https://github.com/TangoMan75)
 
 [Matthias Morin | LinkedIn](https://www.linkedin.com/in/morinmatthias)
 
-[license-GPL]: https://img.shields.io/badge/Licence-GPLv3.0-green.svg
 [license-MIT]: https://img.shields.io/badge/Licence-MIT-green.svg
 [license-url]: LICENSE

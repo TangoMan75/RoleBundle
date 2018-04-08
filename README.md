@@ -189,6 +189,13 @@ $ php bin/console tangoman:roles
 $ php bin/console tangoman:privileges
 ```
 
+Deprecation Warning
+===================
+
+For Symfony 3.4 and Symfony 4 users :
+
+> User Deprecated: The "TangoMan\RoleBundle\Model\Role" class implements "Symfony\Component\Security\Core\Role\RoleInterface" that is deprecated The RoleInterface is deprecated since version 3.3 and will be removed in 4.0. Extend the Symfony\Component\Security\Core\Role\Role class instead.
+
 Note
 ====
 

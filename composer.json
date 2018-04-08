@@ -1,7 +1,7 @@
 {
     "name": "tangoman/role-bundle",
     "description": "Symfony Role Bundle",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "license": "MIT",
     "authors": [
         {
@@ -20,7 +20,7 @@
     "require": {
         "php": ">=5.3.0",
         "tangoman/entity-helper": "^2.0",
-        "symfony/framework-bundle": "^3.4 || ^4.0"
+        "symfony/framework-bundle": "^3.4"
     },
     "autoload": {
         "psr-4": {

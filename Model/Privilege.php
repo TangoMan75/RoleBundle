@@ -1,4 +1,10 @@
 <?php
+/**
+ * Copyright (c) 2018 Matthias Morin <matthias.morin@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
 namespace TangoMan\RoleBundle\Model;
 
@@ -15,10 +21,12 @@ use TangoMan\EntityHelper\Traits\HasName;
  * @ORM\HasLifecycleCallbacks()
  *
  * @author  Matthias Morin <matthias.morin@gmail.com>
+ *
  * @package TangoMan\RoleBundle\Model
  */
 class Privilege
 {
+
     use HasLabel;
     use HasName;
 
@@ -58,7 +66,7 @@ class Privilege
     public function setDefaults()
     {
         // Default privilege type is uppercased name with "CAN_" prefix without whitespaces
-        if (!$this->type) {
+        if ( ! $this->type) {
             $this->type = $this->name;
         }
 

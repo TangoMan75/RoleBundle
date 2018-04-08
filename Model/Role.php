@@ -1,6 +1,18 @@
 <?php
+/**
+ * Copyright (c) 2018 Matthias Morin <matthias.morin@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
 namespace TangoMan\RoleBundle\Model;
+
+@trigger_error(
+    'The '.__NAMESPACE__
+    .'\Role class class extends "\Symfony\Component\Security\Core\Role\Role" that is deprecated.',
+    E_USER_DEPRECATED
+);
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -15,11 +27,13 @@ use TangoMan\EntityHelper\Traits\HasName;
  * Class Role
  * @ORM\HasLifecycleCallbacks()
  *
- * @author  Matthias Morin <matthias.morin@gmail.com>
- * @package TangoMan\RoleBundle\Model
+ * @author     Matthias Morin <matthias.morin@gmail.com>
+ * @deprecated The "TangoMan\RoleBundle\Model\Role" class extends "\Symfony\Component\Security\Core\Role\Role" that is deprecated.
+ * @package    TangoMan\RoleBundle\Model
  */
 class Role extends \Symfony\Component\Security\Core\Role\Role
 {
+
     use HasLabel;
     use HasName;
 
@@ -48,7 +62,7 @@ class Role extends \Symfony\Component\Security\Core\Role\Role
     public function __construct()
     {
         $this->privileges = new ArrayCollection();
-        $this->users = new ArrayCollection();
+        $this->users      = new ArrayCollection();
     }
 
     /**
@@ -74,7 +88,7 @@ class Role extends \Symfony\Component\Security\Core\Role\Role
      */
     public function getIcon()
     {
-        if (!$this->icon) {
+        if ( ! $this->icon) {
             return 'glyphicon glyphicon-user';
         } else {
             return $this->icon;
@@ -90,15 +104,16 @@ class Role extends \Symfony\Component\Security\Core\Role\Role
     {
         // Allowed icons for user roles are: User, pawn, knight, bishop, tower, queen, and king.
         if (in_array(
-            $icon, [
-                     'glyphicon glyphicon-user',
-                     'glyphicon glyphicon-pawn',
-                     'glyphicon glyphicon-knight',
-                     'glyphicon glyphicon-bishop',
-                     'glyphicon glyphicon-tower',
-                     'glyphicon glyphicon-queen',
-                     'glyphicon glyphicon-king',
-                 ]
+            $icon,
+            [
+                'glyphicon glyphicon-user',
+                'glyphicon glyphicon-pawn',
+                'glyphicon glyphicon-knight',
+                'glyphicon glyphicon-bishop',
+                'glyphicon glyphicon-tower',
+                'glyphicon glyphicon-queen',
+                'glyphicon glyphicon-king',
+            ]
         )) {
             $this->icon = $icon;
         }
@@ -112,7 +127,7 @@ class Role extends \Symfony\Component\Security\Core\Role\Role
     public function setDefaults()
     {
         // Default role type is uppercased name with "ROLE_" prefix without whitespaces
-        if (!$this->type) {
+        if ( ! $this->type) {
             $this->type = $this->name;
         }
 
